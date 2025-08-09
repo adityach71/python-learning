@@ -1,123 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+  </head>
+  <body>
     <header>
-        <style>* {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+          scroll-behavior: smooth;
+        }
 
-    body {
-      background-color: #212121;
-      color: white;
-      line-height: 1.6;
-    }
+        body {
+          background-color: #212121;
+          color: white;
+          line-height: 1.6;
+        }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        header {
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+        }
 
-   
-      nav {
-  display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: white;
-      padding: 10px 20px;
-}
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: white;
+          padding: 10px 20px;
+        }
 
-    
+        .nav-buttons {
+          display: flex;
+          gap: 15px;
+        }
 
-    .nav-buttons {
-      display: flex;
-      gap: 15px;
-    }
+        nav a {
+          color: black;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: bold;
+          transition: color 0.3s;
+        }
 
-    nav a {
-      color: black;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
+        nav a:hover {
+          color: #00adb5;
+        }
 
-    nav a:hover {
-      color: #00adb5;
-    }
+        .hamburger {
+          display: none;
+          font-size: 24px;
+          cursor: pointer;
+        }
+        h1 {
+          align-items: center;
+          text-align: center;
+           text-align: center;
+          margin-top: 100px;
+          font-size: 2rem;
+        }
+      
+        .about-text {
+          max-width: 600px;
+          margin: 20px auto;
+          padding: 0 15px;
+          text-align: center;
+          font-size: 1rem;
+        }
 
-    .hamburger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    h1{
-        align-items: center;
-        text-align: center;
-    }
-    h1 {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 2rem;
-}
+        @media (max-width: 600px) {
+          nav {
+            flex-direction: column;
+            align-items: flex-start;
+          }
 
-.about-text {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 0 15px;
-  text-align: center;
-  font-size: 1rem;
-}
+          .nav-buttons {
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
+          }
 
+          .about-text {
+            font-size: 0.95rem;
+          }
 
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-buttons {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .about-text {
-    font-size: 0.95rem;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-}
-
-    </style>
-    <nav>
-      <h3 style="color:#00adb5;">Aditya</h3>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <div class="nav-buttons" id="navMenu">
-        <a href="project-1 home page.html">Home</a>
-        <a href="project-1 About.html">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#build">Build</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-  <h1 style="margin-top: 100px;">About Me</h1>
-  <p class="about-text">
-  I’m a self-taught front-end web developer passionate about creating modern, responsive websites. I enjoy building articles and small games that combine creativity with code. My goal is to keep learning and improve my skills while building real-world projects that are both beautiful and functional.
-</p>
-
-</body>
+          h1 {
+            font-size: 1.6rem;
+          }
+        }
+      </style>
+      <nav>
+        <h3 style="color: #00adb5">Aditya</h3>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-buttons" id="navMenu">
+          <a href="project-1 home page.html">Home</a>
+          <a href="project-1 About.html">About</a>
+          <a href="project-1 Skills.html">Skills</a>
+          <a href="project-1 Contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <h1 style="margin-top: 100px">About Me</h1>
+    <p class="about-text">
+      I’m a self-taught front-end web developer passionate about creating
+      modern, responsive websites. I enjoy building articles and small games
+      that combine creativity with code. My goal is to keep learning and improve
+      my skills while building real-world projects that are both beautiful and
+      functional.
+    </p>
+  </body>
 </html>

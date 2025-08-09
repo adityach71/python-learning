@@ -1,213 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya's Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya's Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome (for icons) -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: #212121;
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-   
-      nav {
-  display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: white;
-      padding: 10px 20px;
-}
-
-    
-
-    .nav-buttons {
-      display: flex;
-      gap: 15px;
-    }
-
-    nav a {
-      color: black;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #00adb5;
-    }
-
-    .hamburger {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 50px 0;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    .project {
-      display: inline-block;
-      background-color: #00adb5;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin-top: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      text-transform: uppercase;
-    }
-
-    .project:hover {
-      background-color: #009ea8;
-    }
-
-    h2 {
-      margin-top: 30px;
-      color: #00adb5;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    .contact a {
-      color: #00adb5;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Mobile Styles */
-    @media (max-width: 768px) {
-      .nav-buttons {
-        display: none;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        border: 1px solid #ccc;
-        padding: 10px;
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        scroll-behavior: smooth;
       }
 
-      .nav-buttons.active {
+      body {
+        background-color: #212121;
+        color: white;
+        line-height: 1.6;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      nav a {
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #00adb5;
       }
 
       .hamburger {
-        display: block;
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
       }
-    }
-  </style>
-</head>
-<body>
 
-  <header>
-    <nav>
-      <h3 style="color:#00adb5;">Aditya</h3>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-      <div class="nav-buttons" id="navMenu">
-        <a href="project-1 home page.html">Home</a>
-        <a href="project-1 About.html">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#build">Build</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 40px 20px;
+      }
 
-  <div class="container">
-    <section id="home" class="hero">
-      <h1>Hi, I'm Aditya</h1>
-      <p>I'm a frontend website developer</p>
-      <a href="https://github.com/adityach71/Projects-of-Aditya" target="_blank"><button class="project">See my projects</button></a>
-    </section>
+      .hero {
+        text-align: center;
+        padding: 50px 0;
+      }
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I’m a self-taught web developer passionate about creating responsive and modern websites.
-        I love turning ideas into real, user-friendly projects and always look for ways to improve my skills and learn new technologies.
-        My goal is to build websites that not only look good but also work smoothly on all devices.
-      </p>
-    </section>
+      .hero h1 {
+        font-size: 36px;
+      }
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>HTML | CSS | JavaScript</p>
-    </section>
+      .hero p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
 
-    <section id="build">
-      <h2>What I Like to Build</h2>
-      <p>
-        I especially enjoy building articles and small games that combine creativity with code.
-      </p>
-    </section>
+      .project {
+        display: inline-block;
+        background-color: #00adb5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-transform: uppercase;
+      }
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>
-        <a href="mailto:gokuisgoat77@gmail.com"><i class="fas fa-envelope"></i> gokuisgoat77@gmail.com</a>
-      </p>
-      <p>
-        <a href="https://github.com/adityach71/Projects-of-Aditya" target="_blank"><i class="fab fa-github"></i> github.com/adityach71/Projects-of-Aditya</a>
-      </p>
-    </section>
-  </div>
+      .project:hover {
+        background-color: #009ea8;
+      }
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navMenu');
-      nav.classList.toggle('active');
-    }
-  </script>
+      h2 {
+        margin-top: 30px;
+        color: #00adb5;
+      }
 
-</body>
+      section {
+        margin-top: 40px;
+      }
+
+      .contact a {
+        color: #00adb5;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+
+        .nav-buttons.active {
+          display: flex;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h3 style="color: #00adb5">Aditya</h3>      
+        <div class="nav-buttons" id="navMenu">
+          <a href="project-1 home page.html">Home</a>
+          <a href="project-1 About.html">About</a>
+          <a href="project-1 Skills.html">Skills</a>
+          <a href="project-1 Contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="home" class="hero">
+        <h1>Hi, I'm Aditya</h1>
+        <p>I'm a frontend website developer</p>
+        <a
+          href="https://github.com/adityach71/Projects-of-Aditya"
+          target="_blank"
+          ><button class="project">See my projects</button></a
+        >
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I’m a self-taught web developer passionate about creating responsive
+          and modern websites. I love turning ideas into real, user-friendly
+          projects and always look for ways to improve my skills and learn new
+          technologies. My goal is to build websites that not only look good but
+          also work smoothly on all devices.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p>HTML | CSS | JavaScript</p>
+      </section>
+
+      <section id="build">
+        <h2>What I Like to Build</h2>
+        <p>
+          I especially enjoy building articles and small games that combine
+          creativity with code.
+        </p>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:minikakumari8420@gmail.com"
+            ><i class="fas fa-envelope"></i>minikakumari8420@gmail.com</a
+          >
+        </p>
+        <p>
+          <a
+            href="https://github.com/adityach71/Projects-of-Aditya"
+            target="_blank"
+            ><i class="fab fa-github"></i>
+            github.com/adityach71/Projects-of-Aditya</a
+          >
+        </p>
+      </section>
+    </div>
+
+   
+  </body>
 </html>
