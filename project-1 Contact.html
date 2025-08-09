@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Me</title>
   <style>
     * {
       margin: 0;
@@ -30,7 +30,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       padding: 10px 20px;
     }
 
@@ -50,68 +49,89 @@
     nav a:hover {
       color: #00adb5;
     }
+
     h1 {
-      align-items: center;
-      text-align: center;
       text-align: center;
       margin-top: 100px;
       font-size: 2rem;
     }
-    p {
-      text-align: center;
-      font-size: 1.1rem;
-      margin: 15px 0;
+
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      gap: 15px;
     }
 
-    p img {
-      margin-right: 8px;
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #2c2c2c;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: #00adb5;
+    }
+
+    .contact-item img {
+      width: 20px;
       filter: invert(100%);
     }
 
-    p a {
+    .contact-item a,
+    .contact-item span {
       color: #00adb5;
       text-decoration: none;
       transition: color 0.3s;
     }
 
-    p a:hover {
-      color: #00ffcc;
+    .contact-item:hover a,
+    .contact-item:hover span {
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
-  <body>
-    <header>
-      <nav>
-        <h3 style="color: #00adb5">Aditya</h3>
-        <div class="nav-buttons" id="navMenu">
-          <a href="project-1 home page.html">Home</a>
-          <a href="project-1 About.html">About</a>
-          <a href="project-1 Skills.html">Skills</a>
-          <a href="project-1 Contact.html">Contact</a>
-        </div>
-      </nav>
-    </header>
-    <h1>Contact</h1>
-    <p>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-        alt="Email Icon"
-        style="width: 20px; vertical-align: middle"
-      />
-      <span>minikakumari8420@gmail.com</span>
-    </p>
+</head>
 
-    <p>
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-        alt="GitHub Icon"
-        style="width: 20px; vertical-align: middle"
-      />
-      <a
-        href="https://github.com/adityach71/Projects-of-Aditya"
-        target="_blank"
-      >
-        github.com/adityach71/Projects-of-Aditya
-      </a>
-    </p>
-  </body>
+<body>
+  <header>
+    <nav>
+      <h3 style="color: #00adb5">Aditya</h3>
+      <div class="nav-buttons">
+        <a href="project-1 home page.html">Home</a>
+        <a href="project-1 About.html">About</a>
+        <a href="project-1 Skills.html">Skills</a>
+        <a href="project-1 Contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <h1>Contact</h1>
+  <div class="contact-container">
+    <div class="contact-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" />
+      <span>minikakumari8420@gmail.com</span>
+    </div>
+    <div class="contact-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Icon" />
+      <a href="https://github.com/adityach71/Projects-of-Aditya"
+        target="_blank">github.com/adityach71/Projects-of-Aditya</a>
+    </div>
+  </div>
+</body>
+
 </html>
