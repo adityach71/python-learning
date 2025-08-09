@@ -2,71 +2,146 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
 
-        body {
-            background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chanwalrus-958545.jpg&fm=jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-        }
+    body {
+      background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chanwalrus-958545.jpg&fm=jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
 
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .nav-buttons {
-            display: flex;
-            gap: 15px;
-        }
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
 
-        nav a {
-            color: black;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    nav a {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        nav a:hover {
-            color: #00adb5;
-        }
-    </style>
+    nav a:hover,
+    nav a.active {
+      color: #00adb5;
+    }
+
+    
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    
+    @media (max-width: 768px) {
+      .nav-buttons {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        width: 150px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        display: none;
+      }
+
+      .nav-buttons.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+     h1 {
+        color: white;
+      text-align: center;
+      margin-top: 100px;
+      font-size: 2rem;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="nav-buttons" id="navMenu">
-                <a href="project-1 home page.html">Home</a>
-                <a href="project-1 About.html">About</a>
-                <a href="project-1 Skills.html">Skills</a>
-                <a href="project-1 Contact.html">Contact</a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="nav-buttons" id="navMenu">
+        <a href="project-1 home page.html">Home</a>
+        <a href="project-1 About.html">About</a>
+        <a href="project-1 Skills.html">Skills</a>
+        <a href="project-1 Contact.html">Contact</a>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+<h1>RESTAURANT</h1>
+<h2>Test The Flaver</h2>
+  <script>
+  
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+   
+    const links = document.querySelectorAll('.nav-buttons a');
+    const currentPage = window.location.pathname.split('/').pop().toLowerCase();
+
+    links.forEach(link => {
+      let linkPage = link.getAttribute('href').toLowerCase();
+      if (linkPage === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
 </body>
 
 </html>
