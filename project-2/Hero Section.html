@@ -146,19 +146,40 @@
       font-size: 0.9rem;
       margin-top: 30px;
     }
+    .btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover {
+  background-color: white;
+  color: #222;
+}
+
   </style>
 </head>
 
 <body>
 
   <div class="hero">
-    <div class="hero-content">
-      <a href="reservation.html">Reserve Table</a>
-
-      <p>Taste the Flavor</p>
-      <button onclick="window.open('#contact', '_self')">Reserve a Table</button>
-    </div>
+  <div class="hero-content">
+    <h1>Welcome to Our Restaurant</h1>
+    <p>Taste the Flavor</p>
+    <a href="reservation.html" class="btn" target="_blank" rel="noopener noreferrer">
+      Reserve a Table
+    </a>
   </div>
+</div>
+
 
   <h4>GALLERY</h4>
   <div class="gallery">
