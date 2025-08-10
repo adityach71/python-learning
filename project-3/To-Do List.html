@@ -38,13 +38,13 @@
        }
        button {
         flex: 1;
-        padding: 12px 15px;
+        padding: 10px 15px;
         background: blue;
         color: white;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: bold;
         border: none;
-        border-radius: 5px;
+        border-radius: 20px;
         cursor: pointer;
         transition: background 0.3s ease, transform 0.2s ease;
        }
@@ -61,8 +61,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 8px;
-        margin-bottom: 5px;
+        padding: 8px 12px;
+        margin-bottom: 8px;
         border-bottom: 1px solid #ddd;
         background: #f9f9f9;
         border-radius: 5px;
@@ -81,16 +81,24 @@
         color: gray;
        }
        .delete {
+        padding: 6px 12px;
+        font-size: 12px;
         background: red;
         color: white;
         border: none;
-        padding: 5px 8px;
-        border-radius: 5px;
+        border-radius: 20px;
         cursor: pointer;
-        transition: background 0.3s ease;
+        transition: background 0.3s ease, transform 0.2s ease;
        }
        .delete:hover {
         background: darkred;
+        transform: scale(1.05);
+       }
+       /* Fade out animation for delete */
+       .fade-out {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
        }
     </style>
 </head>
@@ -140,8 +148,11 @@
         del.textContent = 'Delete';
         del.className = 'delete';
         del.addEventListener('click', () => {
-            li.remove();
-            saveTasks();
+            li.classList.add('fade-out');
+            setTimeout(() => {
+                li.remove();
+                saveTasks();
+            }, 300);
         });
 
         li.appendChild(span);
