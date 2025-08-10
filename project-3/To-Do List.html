@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+       }
+       .container{
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+       }
+       h2{
+        text-align: center;
+       }
+       .input-area{
+        display: flex;
+        gap: 5px;
+       }
+       input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+       }
+       button{
+        padding: 8px 12px;
+        background: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+       ul{
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+       }
+       li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+       }
+       li.completed span {
+        text-decoration: line-through;
+        color: gray;
+       }
+       .delete{
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h2>To-Do List</h2>
+    <div class="input-area">
+        <input type="text" id="textInput" placeholder="Add a new text">
+        <button id="addTesk">Add</button>
+
+    </div>
+    <ul id="tasklist"></ul>
+   </div>
+   <script>
+    const taskInput = document.getElementById('taskInput')
+    const addTasks = document.getElementById('addTesk')
+    const taskList = document.getElementById('taskList')
+
+    function losdTask(params) {
+        const savedTasks = JSON.parse(localStorage.getItem('tasks'))
+        savedTasks.forEach(task => createTask(task.text, tesk.completed));
+    }
+   </script>
+</body>
+</html>
