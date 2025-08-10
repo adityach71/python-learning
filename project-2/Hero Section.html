@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,74 +15,172 @@
     }
 
     body {
-      background: #fff;
+      background-color: #f9f9f9;
       color: #333;
     }
 
     .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1541542684-4a7c8683e9f8') center/cover no-repeat;
+      background-image: url('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chanwalrus-958545.jpg&fm=jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 450px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
       color: white;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
     }
 
     .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3.5rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
     .hero-content p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-style: italic;
+      margin-bottom: 30px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #ff6347;
+    .hero-content button {
+      background-color: transparent;
+      border: 2px solid white;
       color: white;
-      text-decoration: none;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
       border-radius: 5px;
-      transition: background 0.3s;
+      transition: 0.3s;
+      text-transform: uppercase;
     }
 
-    .btn:hover {
-      background: #e5533d;
+    .hero-content button:hover {
+      background-color: white;
+      color: #222;
     }
 
-    section {
-      padding: 50px;
+    h4 {
       text-align: center;
+      margin: 40px 0 20px;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #222;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 260px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .contact p {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .contact a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     iframe {
-      max-width: 100%;
+      display: block;
+      width: 100%;
+      height: 300px;
       border: none;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      margin-top: 30px;
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Hero Section -->
   <div class="hero">
     <div class="hero-content">
-      <h1>Welcome to Our Restaurant</h1>
-      <p>Delicious food, cozy atmosphere</p>
-      <a href="#map" class="btn">Reserve a Table</a>
+        <h1>RESTAURANT</h1>
+      <p>Taste the Flavor</p>
+      <button onclick="window.open('#contact', '_self')">Reserve a Table</button>
     </div>
   </div>
 
-  <!-- Map Section -->
-  <section id="map">
-    <h2>Find Us</h2>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.232019432415!2d-122.41941518468238!3d37.77492977975909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c5d08f8f%3A0x56c93e3d55a2a4e8!2sRestaurant!5e0!3m2!1sen!2sus!4v1620239534893!5m2!1sen!2sus"
-      width="600" height="450" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
+  <h4>GALLERY</h4>
+  <div class="gallery">
+    <img src="https://t3.ftcdn.net/jpg/01/09/75/90/360_F_109759077_SVp62TBuHkSn3UsGW4dBOm9R0ALVetYw.jpg" alt="Dish 1" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBD0YFwHnIA_PmvsAdU4AYf_q1aOOIKCT0Bw&s" alt="Restaurant Interior" />
+    <img src="https://t3.ftcdn.net/jpg/14/92/66/48/360_F_1492664832_A5yZ28fWSviixjEtQscJw5L5saTmz1qt.jpg" alt="Salad" />
+  </div>
+
+  <h4 id="contact">CONTACT</h4>
+  <div class="contact">
+    <p>(123) 456-7090</p>
+    <p>minikakumari8420@gmail.com</p>
+    <a href="https://www.google.com/maps/@22.5640448,88.4015104,12z?entry=ttu" target="_blank" rel="noopener noreferrer">
+      Get Directions
+    </a>
+  </div>
+
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116289.59503551129!2d88.523586394631!3d24.379569378876106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fbefa96a38d031%3A0x10f93a950ed6f410!2sRajshahi%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1754801586973!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <footer>
+    &copy; 2025 Restaurant. All Rights Reserved.
+  </footer>
 
 </body>
+
 </html>
