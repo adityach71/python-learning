@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+    }
+    .temp {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .search {
+      margin-top: 15px;
+    }
+    .search input {
+      padding: 8px;
+      font-size: 1rem;
+    }
+    .search button {
+      padding: 8px 12px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>New York</h1>
+  <h2>Sunny</h2>
+  <img src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-vector-sun-icon-png-image_4868966.jpg" alt="Weather Icon" class="icon">
+  <div class="temp">23°C</div>
+  <div class="search">
+    <input type="text" placeholder="Search city">
+    <button>Search</button>
+  </div>
+  <div class="error"></div>
+</div>
+
+<script>
+  const apiKey = "69f29c12584568d52389912b639769ee"; // Replace with a valid API key if needed
+  const cityElement = document.querySelector("h1");
+  const conditionElement = document.querySelector("h2");
+  const tempElement = document.querySelector(".temp");
+  const iconElement = document.querySelector(".icon");
+  const searchInput = document.querySelector(".search input");
+  const searchButton = document.querySelector(".search button");
+  const errorElement = document.querySelector(".error");
+
+  function getWeather(city) {
+    // Clear previous error and reset UI
+    errorElement.textContent = "";
+    cityElement.textContent = "Loading...";
+    conditionElement.textContent = "";
+    tempElement.textContent = "--°C";
+    iconElement.src = "https://via.placeholder.com/80?text=?";
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(response.status === 404 ? "City not found" : `Failed to fetch weather data: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("API Response:", data); // Debug response
+        cityElement.textContent = data.name || city;
+        conditionElement.textContent = data.weather[0].main || "Unknown";
+        tempElement.textContent = `${Math.round(data.main.temp)}°C`;
+        iconElement.src = data.weather[0].icon 
+          ? `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+          : "https://via.placeholder.com/80?text=Icon+Error";
+      })
+      .catch(error => {
+        cityElement.textContent = "Error";
+        conditionElement.textContent = "";
+        tempElement.textContent = "--°C";
+        iconElement.src = "https://via.placeholder.com/80?text=?";
+        errorElement.textContent = error.message;
+        console.error("Fetch error:", error);
+      });
+  }
+
+  searchButton.addEventListener("click", () => {
+    const city = searchInput.value.trim();
+    if (city) {
+      getWeather(city);
+    } else {
+      errorElement.textContent = "Please enter a city name";
+    }
+  });
+
+  searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      const city = searchInput.value.trim();
+      if (city) {
+        getWeather(city);
+      } else {
+        errorElement.textContent = "Please enter a city name";
+      }
+    }
+  });
+
+  // Load default city
+  getWeather("New York");
+</script>
+</body>
+</html>
