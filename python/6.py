@@ -1,0 +1,28 @@
+# a = input("Enter your name: ")
+# print("My name is", a)
+
+x = float(input("Enter your first name: "))
+y = float(input("Enter your Second name: "))
+# print(x + y)
+
+print ("Sum =",(x) + (y))
+
+# assinment
+f = float(input("Enter your first number: "))
+j = float(input("Enter your Second number: "))
+print("Sum =", f - j)
+d = float(input("Enter your first number: "))
+s = float(input("Enter your Second number: "))
+print("Sum =", d * s)
+a = float(input("Enter your first number: "))
+k = float(input("Enter your Second number: "))
+print("Sum =", a ** k)
+l = float(input("Enter your first number: "))
+h = float(input("Enter your Second number: "))
+print("Sum =", l / h)
+g = float(input("Enter your first number: "))
+u = float(input("Enter your Second number: "))
+print("Sum =", g % u)
+t = float(input("Enter your first number: "))
+r = float(input("Enter your Second number: "))
+print("Sum =", t // r)
