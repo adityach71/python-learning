@@ -17,3 +17,20 @@ def name(fname, mname="Aditya", lname="Choudhary"):
 
 
 name("Amy")
+
+def avarage(*numbers):
+    sum = 0
+    for i in numbers:
+        sum = sum + i
+        print("Average is: ", sum / len(numbers))
+# avarage(5,6,7,1)
+    return sum /  len(numbers)
+
+c= avarage(5,6,7,1)
+print(c)
+
+def name(**name):
+    print("Hello, ", name["fname"],
+       name["mname"], name["lname"] )
+    
+name(mname = "Buchanan", lname = "Barnes", fname = "james")
