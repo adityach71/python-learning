@@ -4,9 +4,9 @@ print(len(a))
 print(a.upper())
 print(a.lower())
 print(a.rstrip("?"))
-print(a.replace("Aditya","John"))
+print(a.replace("Aditya", "John"))
 print(a.split(" "))
-blogHeading= "introdustion to js"
+blogHeading = "introdustion to js"
 print(blogHeading.capitalize())
 str1 = "Welcome to the Console!!!"
 print(len(str1))
@@ -17,9 +17,9 @@ print((str1.endswith("!!!")))
 
 str1 = "He's name is Dan. He is an honest man"
 # print(str1.index("ishh"))
-str1= "We wish you a Merry Chrismas\n"
+str1 = "We wish you a Merry Chrismas\n"
 print(str1.isprintable())
-str1 ="            "
+str1 = "            "
 print(str1.isspace())
 str2 = "   "
 print(str2.isspace())

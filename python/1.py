@@ -1,5 +1,7 @@
 print("Hello, World!")
 print(5)
 print("Bye")
-print(17*13)
-print("In the quiet hum of code at night,Ideas spark and softly ignite.Lines and logic, dreams unfold,Stories written, futures told.Through errors, fixes, and debug’s art,A coder’s journey, a hopeful heart.With every run, a lesson learned—In every file, ambition burned.")
+print(17 * 13)
+print(
+    "In the quiet hum of code at night,Ideas spark and softly ignite.Lines and logic, dreams unfold,Stories written, futures told.Through errors, fixes, and debug’s art,A coder’s journey, a hopeful heart.With every run, a lesson learned—In every file, ambition burned."
+)

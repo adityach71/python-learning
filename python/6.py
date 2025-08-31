@@ -5,7 +5,7 @@ x = float(input("Enter your first name: "))
 y = float(input("Enter your Second name: "))
 # print(x + y)
 
-print ("Sum =",(x) + (y))
+print("Sum =", (x) + (y))
 
 # assinment
 f = float(input("Enter your first number: "))
@@ -16,7 +16,7 @@ s = float(input("Enter your Second number: "))
 print("Sum =", d * s)
 a = float(input("Enter your first number: "))
 k = float(input("Enter your Second number: "))
-print("Sum =", a ** k)
+print("Sum =", a**k)
 l = float(input("Enter your first number: "))
 h = float(input("Enter your Second number: "))
 print("Sum =", l / h)

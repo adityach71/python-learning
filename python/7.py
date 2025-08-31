@@ -3,10 +3,10 @@ print("Hello, " + name)
 friend = "Rohan"
 anotherFriend = "Lovish"
 
-apple = '''He said,  
+apple = """He said,  
 Hi Aditya 
 hey i am good 
-"I want to eat an apple'''
+"I want to eat an apple"""
 # print(apple)
 print(name[0])
 print(name[1])
