@@ -1,0 +1,13 @@
+{
+    // Enable font ligatures (requires a compatible font)
+    "editor.fontFamily": "'Fira Code', 'JetBrains Mono', 'Consolas', 'monospace'",
+    "editor.fontLigatures": true,
+    // Hide minimap for a cleaner look
+    "editor.minimap.enabled": false,
+    // Enable smooth scrolling
+    "editor.smoothScrolling": true,
+    // Modern UI tweaks
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.showTabs": true,
+    "workbench.sideBar.location": "left"
+}

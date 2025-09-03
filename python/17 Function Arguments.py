@@ -8,8 +8,7 @@ avarage(
     b=9, a=21
 )  # if you want to arange the numbers without the function order you can use this way to decleare the object value
 
-# for i in range(1000):
-#     print("Love ❤️  you")
+
 
 
 def name(fname, mname="Aditya", lname="Choudhary"):

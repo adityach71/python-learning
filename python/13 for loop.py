@@ -18,3 +18,6 @@
 
 for k in range(1, 12, 3):
     print(k)
+
+for i in range(1000):
+    print("Love ❤️  you")
