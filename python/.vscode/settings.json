@@ -8,6 +8,6 @@
     "editor.smoothScrolling": true,
     // Modern UI tweaks
     "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.showTabs": true,
+    "workbench.editor.showTabs": "multiple",
     "workbench.sideBar.location": "left"
 }
