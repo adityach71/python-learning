@@ -1,6 +1,6 @@
-tup = (1, 2, 3 ,4 ,5, "green", True)
+tup = (1, 2, 3, 4, 5, "green", True)
 # tu[0] = 90
-print(type(tup),tup)
+print(type(tup), tup)
 print(len(tup))
 print(tup[0])
 print(tup[-1])
